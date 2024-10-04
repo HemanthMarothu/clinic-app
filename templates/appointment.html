@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Book an Appointment</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/appointment">Book Appointment</a>
+            <a href="/contact">Contact Us</a>
+        </nav>
+    </header>
+    <section>
+        <form id="appointmentForm" action="/submit" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</body>
+</html>
